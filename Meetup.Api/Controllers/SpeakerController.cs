@@ -1,11 +1,13 @@
 ﻿using Meetup.Application.Models.Speaker;
 using Meetup.Application.Services.Intarfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Meetup.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SpeakerController : ControllerBase
     {
         private readonly ISpeakerService _service;
